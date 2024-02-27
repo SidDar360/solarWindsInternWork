@@ -2,9 +2,9 @@ openapi: 3.0.3
 info:
   title: Ingester
   description: |-
-  termsOfService: http://swagger.io/terms/
+  termsOfService: http://coollogingester.ai/terms
   contact:
-    email: apiteam@swagger.io
+    email: apiteam@coollogingester.ai
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
@@ -13,16 +13,10 @@ externalDocs:
   description: Find out more about Swagger
   url: http://swagger.io
 servers:
-  - url: https://ingester.swagger.io/api/v3
+  - url: https://ingester.coollogingester.ai/api/v3
 tags:
   - name: logs
-#   - name: store
-#     description: Access to Petstore orders
-#     externalDocs:
-#       description: Find out more about our store
-#       url: http://swagger.io
-#   - name: user
-#     description: Operations about user
+
 paths:
   /logs:
     post:
@@ -43,18 +37,8 @@ paths:
           description: Successful response
         '400':
           description: Invalid input
-          headers:
-            X-Custom-Header:
-              description: Custom header description
-              schema:
-                type: string
-    get:
-      tags:
-        - logs
-      summary: Retrieve logs
-      responses:
-        '200':
-          description: Successful response
-        '400':
-          description: Invalid input
+        '403':
+          description: Hey! You're not allowed there ;)
+        '500':
+          description: We are currently experiencing issues..please try later
         
