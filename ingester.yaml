@@ -1,0 +1,44 @@
+openapi: 3.0.3
+info:
+  title: Ingester
+  description: |-
+  termsOfService: http://coollogingester.ai/terms
+  contact:
+    email: apiteam@coollogingester.ai
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.11
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+  - url: https://ingester.coollogingester.ai/api/v3
+tags:
+  - name: logs
+
+paths:
+  /logs:
+    post:
+      tags:
+        - logs
+      summary: Receive log lines
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                log: 
+                  type: string
+      responses:
+        '200':
+          description: Successful response
+        '400':
+          description: Invalid input
+        '403':
+          description: Hey! You're not allowed there ;)
+        '500':
+          description: We are currently experiencing issues..please try later
+        
