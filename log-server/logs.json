@@ -1,0 +1,12 @@
+[
+    { "message": "This is log message 1" },
+    { "message": "This is log message 2 with additional information" },
+    { "message": "Log number 3" },
+    { "message": "An important event occurred." },
+    { "message": "Routine system check completed successfully." },
+    { "message": "User performed a search query." },
+    { "message": "Application update downloaded and installed." },
+    { "message": "System resources at normal levels." },
+    { "message": "Ending log transmission." }
+]
+  
